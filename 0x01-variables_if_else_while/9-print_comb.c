@@ -7,13 +7,17 @@ int main(void)
 {
 	int n;
 
-	or (n = 0 ; n = 9 ; n++)
+	for (n = 0 ; n == 9 ; n++)
 	{
 		putchar((n % 10) + '0');
 	if (n == 9)
+	{
 		continue;
-	putchar(',');
-	putchar(' ');
-}
+		putchar(',');
+		putchar(' ');
+	}
+	}
+putchar ('\n');
+
 	return (0);
 }
