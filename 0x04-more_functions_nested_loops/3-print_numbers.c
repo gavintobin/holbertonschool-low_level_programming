@@ -2,7 +2,6 @@
 
 /**
  *  print_numbers - prints zero through nine w new line
- *  @i: int for numbers
  *  Return: Always (0)
  */
 
