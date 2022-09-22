@@ -2,7 +2,7 @@
 
 /**
  * _isupper - checks for uppercase characters
- *@c: int for number
+ * @c: int for number
  * Return: (1) uppercase  (0) else
  */
 int _isupper(int c)
