@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *  print_numbers - prints zero throuh nine w new line
+ *  print_numbers - prints zero through nine w new line
  *  @i: int for numbers
  *  Return: Always (0)
  */
@@ -10,7 +10,7 @@ void print_numbers(void)
 {
 	int i;
 
-	for (i = 0 ; i <= 9 ; i++)
+	for (i = 48 ; i <= 57 ; i++)
 	{
 		_putchar(i);
 	}
