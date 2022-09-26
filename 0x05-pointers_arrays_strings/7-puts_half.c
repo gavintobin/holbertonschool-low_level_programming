@@ -2,28 +2,25 @@
 /**
  *puts_half - update value.
  *@str: value to be evaluate.
- *Return: not.
+ *Return: not
  */
 void puts_half(char *str)
 {
-	int length = 0;
-	int modifier = 0;
-	char *y = str;
-	int n;
+	int counter = 0, i, d;
 
-	while (*y != '\0')
+	for (i = 0 ; str[i] ; i++)
+		if (counter % 2 == 0)
+		{
+			i = counter / 2;
+		}
+		else
+		{
+			d = (counter - 1) / 2;
+			i = counter - d;
+		}
+	for ( ; i < counter ; i++)
 	{
-		y++;
-		length++;
+		_putchar(str[i]);
 	}
-
-	if (length % 2 != 0)
-		modifier = 1;
-	n = ((length - modifier) / 2);
-
-	do {
-		_putchar(str[n]);
-		 n++;
-	} while (n < length);
-	_putchar('\x0a');
+	_putchar(10);
 }
