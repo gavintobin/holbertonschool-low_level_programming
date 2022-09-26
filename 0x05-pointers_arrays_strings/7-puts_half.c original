@@ -1,0 +1,34 @@
+#include "main.h"
+#include <string.h>
+
+/**
+ * puts_half - prints half a string
+ * @str: sting name
+ * Return: Always (0)
+ */
+
+void puts_half(char *str)
+{
+	int i;
+	char y;
+	//int len = strlen(str);
+	int mid = len /2;
+
+	while (*y != '\0')
+	{
+		y++;
+		len++; 
+	}
+	
+	if ((len % 2) != 0)
+		modifier = 1;
+
+
+	for(i = mid ; i <= len ; ++i)
+		{
+			_putchar(*str);
+			++str;
+		}
+	_putchar(10);
+}
+	
