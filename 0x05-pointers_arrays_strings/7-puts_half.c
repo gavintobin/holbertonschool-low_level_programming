@@ -1,26 +1,23 @@
 #include "main.h"
+#include <string.h>
+
 /**
- *puts_half - update value.
- *@str: value to be evaluate.
- *Return: not
+ * puts_half - prints half a string
+ * @str: sting name
+ * Return: Always (0)
  */
+
 void puts_half(char *str)
 {
-	int counter = 0, i, d;
+	int i;
+	int len = strlen(str);
+	int mid = len / 2;
 
-	for (i = 0 ; str[i] ; i++)
-		if (counter % 2 == 0)
+	for(i = mid ; mid <= len ; ++i) 
 		{
-			i = counter / 2;
+			_putchar(*str);
+			++str;
 		}
-		else
-		{
-			d = (counter - 1) / 2;
-			i = counter - d;
-		}
-	for ( ; i < counter ; i++)
-	{
-		_putchar(str[i]);
-	}
 	_putchar(10);
 }
+	
