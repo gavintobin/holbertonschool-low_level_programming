@@ -18,15 +18,9 @@ char *_strncat(char *dest, char *src, int n)
 
 	for (leng = 0 ; src[leng] ; leng++)
 	{
-		if (n > src[leng])
-		{
-			dest[len] = src[leng];
-			len++;
-		}
-		else
-		{
-			_putchar('\0');
-		}
+		if (n > leng)
+		dest[len] = src[leng];
+		leng++;
 	}
 	return (dest);
 }
