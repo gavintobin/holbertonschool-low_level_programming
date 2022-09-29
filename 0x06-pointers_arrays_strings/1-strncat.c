@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 			dest[len] = src[leng];
 			len++;
 		}
-		if (n < src[leng])
+		else
 		{
 			_putchar('\0');
 		}
