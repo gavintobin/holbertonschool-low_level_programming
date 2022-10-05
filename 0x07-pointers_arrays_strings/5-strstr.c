@@ -18,10 +18,10 @@ char  *_strstr(char *haystack, char *needle)
 		while (needle[j])
 		{
 			if (haystack[i] == needle[j])
-				return (needle);
+				return (haystack + i);
 			j++;
 		}
 		i++;
 	}
-	return (haystack + i);
+	return ('\0');
 }
