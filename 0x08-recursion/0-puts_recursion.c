@@ -8,7 +8,7 @@
 
 void _puts_recursion(char *s)
 {
-	int i;
+	 auto int i;
 
 	for (i = 0 ; s[i] ; i++)
 	{
