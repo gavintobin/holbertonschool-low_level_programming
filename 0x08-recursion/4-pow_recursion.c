@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _pow_recursion(int x, int y)
+ * _pow_recursion - returns cvalue of x raised to y
  * @x: int one
  * @y: int two
  * Return: -1 if neg
