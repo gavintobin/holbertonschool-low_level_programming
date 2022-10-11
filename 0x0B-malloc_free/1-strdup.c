@@ -20,10 +20,10 @@ char *_strdup(char *str)
 	if (copy == NULL)
 	{
 		free(copy);
-		return(NULL);
+		return (NULL);
 	}
 	_strcpy(copy, str);
-	return(copy);
+	return (copy);
 }
 /**
  * _strlen - function
@@ -40,7 +40,7 @@ int _strlen(char *s)
 		index++;
 		s++;
 	}
-	return(index);
+	return (index);
 }
 /**
  * _strcpy -function
