@@ -1,1 +1,1 @@
-starting with static libraries
+dynamic libraries
