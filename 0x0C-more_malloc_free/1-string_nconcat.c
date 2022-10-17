@@ -1,15 +1,15 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * string_nconcat - concatenates two strings
  * @s1: string one
  * @s2: string two
+ * @n: unsigned int
  * Return: ptr
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n);
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int count, count1;
 	int sign = n;
@@ -27,10 +27,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
 	if (sign >= len2)
 	{
 		sign = len2;
-		ptr = malloc(sizeof(char) * len1 + len2 + 1));
+		ptr = malloc(sizeof(char) * (len1 + len2 + 1));
 	}
 	else
-		ptr= malloc(sizeof(char) * (len1 + n + 1));
+		ptr = malloc(sizeof(char) * (len1 + n + 1));
 	if (ptr == NULL)
 		return (NULL);
 	for (count = 0 ; count < len1 ; count++)
@@ -44,4 +44,3 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
 	ptr[count++] = s2[count1];
 	return (ptr);
 }
-		
