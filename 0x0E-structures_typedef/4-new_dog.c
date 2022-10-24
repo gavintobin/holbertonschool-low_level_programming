@@ -6,7 +6,7 @@
  * @name: of dog
  * @age: of dog
  * @owner: of dog
- * return: struct , null new dog p_dog
+ * Return: new dog p_dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
