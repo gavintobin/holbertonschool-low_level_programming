@@ -6,7 +6,7 @@
  * Return:data
  */
 
- int pop_listint(listint_t **head)
+int pop_listint(listint_t **head)
 {
 	int result = (*head)->n;
 	listint_t *h = (*head);

@@ -21,9 +21,9 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 			return (nn);
 		}
 		while (tail->next)
-			tail= tail->next;
-		
+			tail = tail->next;
+
 		tail->next = nn;
-		
+
 		return (nn);
 }
