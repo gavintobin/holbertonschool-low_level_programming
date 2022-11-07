@@ -2,7 +2,7 @@
 
 
 /**
- * get_nodeint - returns nth node
+ * get_nodeint_at_index - returns nth node
  * @head: pointer
  * @index: beginning of node
  * Return: null
@@ -15,7 +15,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 	while (temp)
 	{
-		if ( i == index)
+		if (i == index)
 			return (temp);
 		temp = temp->next;
 		i++;
