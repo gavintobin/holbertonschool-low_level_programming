@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * print_binary - prints binry of a num
  * @n: number
@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int i = 0;
 
-	if (n == NULL)
+	if (n == 0)
 		_putchar(n + '0');
 
 	while (n > 0)
