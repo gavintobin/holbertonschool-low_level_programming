@@ -11,30 +11,36 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buff;
-	int fd, wr;
-	ssize_t sz;
+	int fd;
+	ssize_t readcount = 0;
+	ssize_t writecount = 0;
 
 	if (filename == NULL)
 		return (0);
-	fd = open(filename, O_RDWR);
-	if (fd == -1)
+	buffer = malloc(letters);
+	if (buffer == NULL)
 		return (0);
-
-	buff = (char *)malloc(sizeof(char) * letters);
-	if (buff == NULL)
+	fd = open(filename, O_RDONLY);
+        if (fd == -1)
+	{
+		free(buffer);
 		return (0);
-
-	sz = read(fd, buff, letters);
-	if (sz == -1)
+	}
+	readcount = read(fd, buffer, letters);
+	if (readcount == -1)
+	{
+		free(buffer);
+		close(fd);
 		return (0);
-
-	buff[sz] = '\0';
-	wr = write(STDOUT_FILEND, buff, sz);
-	if (wr == -1)
+	}
+	writecount = write(STDOUT_FILENO, buffer, readcount);
+	if (writecount == -1)
+	{
+		free(buffer);
+		close(fd);
 		return (0);
-
-	free(buff);
+	}
 	close(fd);
-	return (sz);
+	free(buffer);
+	return (writecount);
 }
-
