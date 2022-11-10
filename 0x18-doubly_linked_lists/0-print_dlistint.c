@@ -1,5 +1,5 @@
 #include "lists.h"
-#include<unisrd.h>
+
 /**
  * print_dlistint - prints lements of list
  * @h: pointer
@@ -12,7 +12,7 @@ size_t print_dlistint(const dlistint_t *h)
 
 	while (h != NULL)
 	{
-		printf("%d\n", n);
+		printf("%d\n", h->n);
 		h = h->next;
 		e++;
 	}
